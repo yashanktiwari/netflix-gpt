@@ -1,6 +1,7 @@
 # Netflix GPT:
 - Vite + React
 - Configured Tailwind CSS
+- Header
 
 # Features:
 - Login/Signup page
