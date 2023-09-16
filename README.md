@@ -2,6 +2,8 @@
 - Vite + React
 - Configured Tailwind CSS
 - Header
+- Sign Up/Sign In Form
+- Login Page
 
 # Features:
 - Login/Signup page
