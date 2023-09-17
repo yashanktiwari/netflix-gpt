@@ -15,6 +15,18 @@
 - Implemented sign out
 - Updated user's profile
 - Redirected
+- BugFixed: Sign up user displayName update
+- BugFixed: If user is not logged in redirect to login page and vice-versa
+- Unsubscribed to the onAuthChanged callback when the component unmounts
+- Add hardcoded values in the constants file
+- Register for TMDB API, register an app and get an access token
+- Get data from TMDB - now playing movies list API
+- Custom hook for now playing movies
+- Create moviesSlice
+- Update store with movies data
+- Fetch trailer video
+- Custom hook for trailer and update the store with trailer video
+- Embeded the youtube video, autoplay, mute
 
 
 # Features:
