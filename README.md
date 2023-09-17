@@ -27,6 +27,14 @@
 - Fetch trailer video
 - Custom hook for trailer and update the store with trailer video
 - Embeded the youtube video, autoplay, mute
+- Build secondary container
+- Build movie list
+- Build movie card
+- TMDB image cdn url
+- Completed browse page
+- usePopularMovies custom hook
+- useTopRatedMovies custom hook
+- useUpcomingMovies custom hook
 
 
 # Features:
