@@ -7,7 +7,6 @@ const useMovieTrailer = (movieId) => {
   // fetch trailer video and updating the store with trailer video data
   const dispatch = useDispatch();
 
-  console.log(movieId);
   const getMovieVideos = async () => {
     const data = await fetch(
       "https://api.themoviedb.org/3/movie/" +
