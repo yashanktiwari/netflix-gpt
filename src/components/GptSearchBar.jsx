@@ -52,19 +52,19 @@ const GptSearchBar = () => {
     dispatch(addGptMovieResult({movieNames: gptMovies, movieResults: tmdbResults}));
   };
   return (
-    <div className="pt-[8%] flex justify-center">
+    <div className="pt-[40%] md:pt-[8%] flex justify-center">
       <form
-        className="bg-black w-1/2 grid grid-cols-12"
+        className="bg-black w-[full] md:w-1/2 grid grid-cols-12"
         onSubmit={(e) => e.preventDefault()}
       >
         <input
           type="text"
-          className="p-4 m-4 col-span-9"
+          className="p-2 md:p-4 m-4 md:m-4 col-span-9 text-sm md:text-lg"
           placeholder={lang[identifier].gptSearchPlaceholder}
           ref={searchText}
         />
         <button
-          className="py-2 px-4 m-4 bg-red-700 text-white rounded-md col-span-3"
+          className="py-1 md:py-2 px-2 md:px-4 m-4 bg-red-700 text-white md:text-lg text-sm rounded-md col-span-3"
           onClick={handleGptSearchClick}
         >
           {lang[identifier].search}
