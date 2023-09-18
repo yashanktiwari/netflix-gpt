@@ -1,9 +1,10 @@
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { API_OPTIONS } from '../utils/constants';
 import { addTopRatedMovies } from "../utils/moviesSlice";
 
 const useTopRatedMovies = () => {
+  const topRatedMovies = useSelector(store => store.movies.topRatedMovies);
   // Fetch data from TMDB api and update the store
   const dispatch = useDispatch();
 
@@ -14,7 +15,8 @@ const useTopRatedMovies = () => {
   }
 
   useEffect(() => {
-    getTopRatedMovies();
+    // Applying memoization
+    !topRatedMovies && getTopRatedMovies();
   }, []);
 }
 

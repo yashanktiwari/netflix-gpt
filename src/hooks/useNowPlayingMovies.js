@@ -1,9 +1,10 @@
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { API_OPTIONS } from '../utils/constants';
 import { addNowPlayingMovies } from "../utils/moviesSlice";
 
 const useNowPlayingMovies = () => {
+  const nowPlayingMovies = useSelector(store => store.movies.nowPlayingMovies);
   // Fetch data from TMDB api and update the store
   const dispatch = useDispatch();
 
@@ -14,7 +15,8 @@ const useNowPlayingMovies = () => {
   }
 
   useEffect(() => {
-    getNowPlayingMovies();
+    // Applying memoization
+    !nowPlayingMovies && getNowPlayingMovies();
   }, []);
 }
 

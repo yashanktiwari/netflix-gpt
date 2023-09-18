@@ -1,9 +1,10 @@
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { API_OPTIONS } from '../utils/constants';
 import { addPopularMovies } from "../utils/moviesSlice";
 
 const usePopularMovies = () => {
+  const popularMovies = useSelector(store => store.movies.popularMovies);
   // Fetch data from TMDB api and update the store
   const dispatch = useDispatch();
 
@@ -14,7 +15,8 @@ const usePopularMovies = () => {
   }
 
   useEffect(() => {
-    getPopularMovies();
+    // Applying memoization
+    !popularMovies && getPopularMovies();
   }, []);
 }
 

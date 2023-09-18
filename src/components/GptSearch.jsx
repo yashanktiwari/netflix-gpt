@@ -10,7 +10,7 @@ const GptSearch = () => {
     Gpt suggestions
     */
     <div>
-      <div className="absolute -z-10">
+      <div className="fixed -z-10">
         <img
           alt="bg-image"
           aria-hidden="true"
